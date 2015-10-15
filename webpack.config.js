@@ -8,7 +8,7 @@ module.exports = Object.assign(prodConfig, {
   devtool: 'inline-source-map',
 
   entry:  [
-    'webpack-dev-server/client?http://127.0.0.1:8080/',
+    'webpack-dev-server/client?http://0.0.0.0:8080/',
     'webpack/hot/only-dev-server',
     './src/client'
   ],
@@ -29,9 +29,9 @@ module.exports = Object.assign(prodConfig, {
   devServer: {
     hot: true,
     proxy: {
-      '*': 'http://127.0.0.1:' + (process.env.PORT || 3000)
+      '*': 'http://0.0.0.0:' + (process.env.PORT || 3000)
     },
-    host: '127.0.0.1'
+    host: '0.0.0.0'
   },
 
   plugins: [

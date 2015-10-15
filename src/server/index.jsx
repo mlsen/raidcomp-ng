@@ -16,7 +16,7 @@ import {fetchComposition} from './database';
 
 const app = express();
 
-nunjucks.configure('views', {
+nunjucks.configure('./src/server/views', {
   autoescape: true,
   express: app
 });
@@ -38,7 +38,7 @@ function handleRender(req, res) {
 
     const compositionId = renderProps.params.compositionId || 0;
 
-    fetchComposition(compositionId)(composition => {
+    fetchComposition(compositionId, composition => {
       const initialState = {
         composition: composition
       };
@@ -61,6 +61,10 @@ function handleRender(req, res) {
 
     });
   });
+}
+
+function renderComposition(composition) {
+
 }
 
 export default app;
