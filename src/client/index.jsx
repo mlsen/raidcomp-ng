@@ -13,9 +13,7 @@ import {fromJS} from 'immutable';
 const history = createBrowserHistory();
 const initialState = window.__INITIAL_STATE__;
 
-const store = createStore(reducer, {
-  names: fromJS(initialState.names)
-});
+const store = createStore(reducer, initialState);
 
 ReactDOM.render(
   <Provider store={store}>

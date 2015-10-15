@@ -1,11 +1,11 @@
 import {List} from 'immutable';
 import {combineReducers} from 'redux';
 
-const initialState = List();
+const initialState = {};
 
-function names(state = initialState, action) {
+function composition(state = initialState, action) {
   switch(action.type) {
-    case 'ADD_NAME':
+    case 'ADD_CHARACTER':
       return state.push(action.name);
     default:
       return state;
@@ -13,5 +13,5 @@ function names(state = initialState, action) {
 }
 
 export default combineReducers({
-  names
+  composition
 });

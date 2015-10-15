@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Raidcomp</title>
+  </head>
+  <body>
+    <div id="app">{{ appHtml | safe }}</div>
+
+    <script>
+      window.__INITIAL_STATE__ = {{ initialState | safe }}
+    </script>
+    <script src="bundle.js"></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@ var outDirectory = 'dist';
 module.exports = {
 
   entry: [
-    './client'
+    './src/client'
   ],
 
   resolve: {
@@ -31,13 +31,5 @@ module.exports = {
         loaders: ['style', 'css', 'sass']
       }
     ]
-  },
-
-  plugins: [
-    // new HtmlWebpackPlugin({
-    //   title: 'React Redux Boilerplate',
-    //   template: './templates/index.html',
-    //   inject: 'body'
-    // })
-  ]
+  }
 };
