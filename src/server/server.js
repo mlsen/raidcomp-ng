@@ -33,7 +33,7 @@ function handleRender(req, res) {
     }
 
     if(!renderProps) {
-      return res.status(404).end('Not found.');
+      return res.status(404).end('Not foundLOL.');
     }
 
     const compositionId = renderProps.params.compositionId || 0;
